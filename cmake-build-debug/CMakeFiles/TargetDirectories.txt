@@ -1,0 +1,3 @@
+/Users/rilu/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/wxwidgets_hello.dir
+/Users/rilu/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/rilu/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/rebuild_cache.dir
