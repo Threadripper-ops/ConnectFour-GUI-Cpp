@@ -20,6 +20,26 @@ A modern implementation of the classic Tic Tac Toe game using C++ and wxWidgets.
 - 🔄 New Game option with mode selection
 - 📊 Real-time game status display
 
+
+## Screenshots
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/game-start.png" width="600" alt="Game Start Screen">
+</p>
+
+<p align="center">
+  <img src="screenshots/pvp-mode.png" width="600" alt="Player vs Player Mode">
+</p>
+
+<p align="center">
+  <img src="screenshots/ai-mode.png" width="600" alt="Player vs AI Mode">
+</p>
+
+<p align="center">
+  <img src="screenshots/win-state.png" width="600" alt="Winning State">
+</p>
+
 ## Project Structure
 ```
 TicTacToe/
