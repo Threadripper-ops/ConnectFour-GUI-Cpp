@@ -11,7 +11,7 @@ GameModeDialog::GameModeDialog(wxWindow* parent)
 
     wxBoxSizer* mainSizer = new wxBoxSizer(wxVERTICAL);
 
-    // Title
+    // adding & styling title
     wxStaticText* titleText = new wxStaticText(this, wxID_ANY, "Select Game Mode",
                                               wxDefaultPosition, wxDefaultSize,
                                               wxALIGN_CENTER_HORIZONTAL);
@@ -21,7 +21,7 @@ GameModeDialog::GameModeDialog(wxWindow* parent)
     titleText->SetFont(titleFont);
     titleText->SetForegroundColour(wxColor(255, 255, 255));
 
-    // Buttons
+    // Buttons & customizatiom
     wxFont buttonFont(12, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
 
     pvpButton = new wxButton(this, wxID_ANY, "Player vs Player",
