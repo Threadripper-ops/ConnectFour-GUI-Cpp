@@ -1,7 +1,7 @@
 
 
 
-# wxWidgets Tic Tac Toe
+# Tic Tac Toe
 
 A modern implementation of the classic Tic Tac Toe game using C++ and wxWidgets. Features both Player vs Player and Player vs AI modes with an unbeatable AI using the Minimax algorithm.
 
