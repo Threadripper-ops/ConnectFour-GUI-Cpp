@@ -1,27 +1,22 @@
 
+# Connect 4
 
-
-# Tic Tac Toe
-
-A modern implementation of the classic Tic Tac Toe game using C++ and wxWidgets. Features both Player vs Player and Player vs AI modes with an unbeatable AI using the Minimax algorithm.
+A modern implementation of the classic Connect 4 game using C++ and wxWidgets. Features both Player vs Player and Player vs AI modes with a sophisticated AI using the Minimax algorithm with Alpha-Beta pruning.
 
 ## Features
 
-- 🎮 Two Game Modes:
-  - Player vs Player (PvP)
+
   - Player vs AI (PvAI)
-- 🤖 Unbeatable AI using Minimax algorithm with Alpha-Beta pruning
+- 🤖 Smart AI using Minimax algorithm with Alpha-Beta pruning
 - 🎯 Score tracking system
 - 🎨 Modern UI with:
-  - Hover effects
-  - Color-coded moves (X: Green, O: Red)
-  - Golden highlighting for winning combinations
+  - Column hover effects
+  - Color-coded pieces (Player 1: Red, Player 2: Yellow)
+  - Flashing animation for winning combinations
   - Clean and intuitive interface
 - 🔄 New Game option with mode selection
 - 📊 Real-time game status display
 
-
-## Screenshots
 ## Screenshots
 
 <p align="center">
@@ -42,7 +37,7 @@ A modern implementation of the classic Tic Tac Toe game using C++ and wxWidgets.
 
 ## Project Structure
 ```
-TicTacToe/
+Connect4/
 ├── src/
 │   ├── MainFrame.cpp
 │   ├── MainFrame.h
@@ -69,8 +64,8 @@ brew install cmake
 
 2. Clone the repository:
 ```bash
-git clone https://github.com/Threadripper-ops/TicTacToe.git
-cd TicTacToe
+git clone https://github.com/Threadripper-ops/Connect4.git
+cd Connect4
 ```
 
 3. Configure CMake project:
@@ -86,7 +81,7 @@ make
 
 5. Run the application:
 ```bash
-./TicTacToe
+./Connect4
 ```
 
 ## How to Play
@@ -94,35 +89,35 @@ make
 1. Launch the game
 2. Select game mode (PvP or PvAI)
 3. In PvP mode:
-   - Players take turns placing X and O
-   - X goes first
+   - Players take turns dropping pieces
+   - Red plays first
+   - Click on a column to drop a piece
 4. In PvAI mode:
-   - Player plays as X
-   - AI plays as O
+   - Player plays as Red
+   - AI plays as Yellow
    - Player goes first
-5. Win by getting three in a row (horizontally, vertically, or diagonally)
+5. Win by connecting four pieces in a row (horizontally, vertically, or diagonally)
 6. Press "New Game" to start over and select a new mode
 
 ## Technical Implementation
 
 ### Game Modes
 1. **Player vs Player (PvP)**
-   - Alternating turns between X and O
+   - Alternating turns between Red and Yellow pieces
    - Score tracking for both players
    - Visual feedback for current turn
 
 2. **Player vs AI**
-   - Player plays as X (first move)
-   - AI plays as O
-   - Unbeatable AI implementation
+   - Player plays as Red (first move)
+   - AI plays as Yellow
+   - Strategic AI implementation
 
 ### UI Features
-- Color-coded moves:
-  - X: Green (RGB: 0, 200, 0)
-  - O: Red (RGB: 255, 0, 0)
-- Background highlighting:
-  - X moves: Light green
-  - O moves: Light red
+- Color-coded pieces:
+  - Player 1: Red (RGB: 255, 0, 0)
+  - Player 2: Yellow (RGB: 255, 215, 0)
+- Column highlighting on hover
+- Piece dropping animation
 - Game status indicators
 - Score tracking display
 - Win/Draw notifications
@@ -131,9 +126,10 @@ make
 - Uses Minimax algorithm with Alpha-Beta pruning
 - Depth-based evaluation for optimal moves
 - Evaluates board state considering:
-  - Row combinations
-  - Column combinations
+  - Horizontal combinations
+  - Vertical combinations
   - Diagonal combinations
+  - Threat detection and blocking
 
 ## Troubleshooting
 
@@ -166,10 +162,11 @@ Feel free to fork the repository and submit pull requests for any improvements.
 ## Code Citations
 
 ### Game Logic and AI Implementation
-The Minimax algorithm with Alpha-Beta pruning implementation in this project was developed with reference to standard game theory concepts and common Tic Tac Toe AI implementations. The AI logic includes:
+The Minimax algorithm with Alpha-Beta pruning implementation in this project was developed with reference to standard game theory concepts and common Connect 4 AI implementations. The AI logic includes:
 - Minimax recursive algorithm for game tree traversal
 - Alpha-Beta pruning for performance optimization
 - Board state evaluation for optimal move selection
+- Position evaluation heuristics specific to Connect 4
 
 ### UI Framework
 - Built using wxWidgets framework
@@ -179,6 +176,7 @@ The Minimax algorithm with Alpha-Beta pruning implementation in this project was
 - wxWidgets Documentation: https://docs.wxwidgets.org/
 - Minimax Algorithm: https://en.wikipedia.org/wiki/Minimax
 - Alpha-Beta Pruning: https://en.wikipedia.org/wiki/Alpha-beta_pruning
+- Connect Four Strategy: https://en.wikipedia.org/wiki/Connect_Four#Mathematical_solution
 
 ## License
 
@@ -187,12 +185,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Author
 
 Threadripper-ops
-```
-
-This documentation:
-1. Provides a complete overview of the project
-2. Includes detailed setup instructions
-3. Details technical implementations
-4. Includes troubleshooting guidance
-5. Maintains proper citations and licensing
-6. Uses clear formatting and structure
