@@ -1,3 +1,4 @@
+// MainFrame.h
 #ifndef MAINFRAME_H
 #define MAINFRAME_H
 
@@ -5,29 +6,34 @@
 
 class MainFrame : public wxFrame {
 private:
-    static const int BOARD_SIZE = 3;
-    wxButton* board[BOARD_SIZE][BOARD_SIZE];
+    static const int ROWS = 6;
+    static const int COLS = 7;
+    wxButton* board[ROWS][COLS];
     wxButton* resetButton;
-    wxStaticText* xScoreLabel;
-    wxStaticText* oScoreLabel;
-    int xScore;
-    int oScore;
-    bool isXTurn;
+    wxStaticText* playerScoreLabel;
+    wxStaticText* aiScoreLabel;
+    int playerScore;
+    int aiScore;
     bool gameOver;
-    wxStaticText* turnLabel;
+    wxStaticText* statusLabel;
 
     void OnButtonClick(wxCommandEvent& evt);
     void CheckWinner();
     void ResetGame(wxCommandEvent& evt);
     void OnButtonHover(wxMouseEvent& evt);
     void OnButtonLeave(wxMouseEvent& evt);
-    bool isPVPMode;
-    void AIMove();  // New function for AI moves
+    void AIMove();
     int Minimax(bool isMaximizing, int depth, int alpha, int beta);
     bool IsMovesLeft();
+
+    void UpdateScore(const wxString &winner);
+
     int EvaluateBoard();
+    int GetLowestEmptyRow(int col);
     std::pair<int, int> GetBestMove();
     wxString GetBoardState(int row, int col);
+    int EvaluateWindow(wxString window[4]);
+    bool IsValidMove(int col);
 
 public:
     MainFrame(const wxString& title);
